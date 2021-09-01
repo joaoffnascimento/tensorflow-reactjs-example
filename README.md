@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">Estudo de caso sobre redes neurais</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto para treinamento de um modelo para fazer previsões a partir de dados numéricos que descrevem um conjunto de carros. Utilizando um pequeno conjunto de dados e um modelo simples.
 
-## Available Scripts
+Exemplo de um dos carros do conjuto fornecido:
 
-In the project directory, you can run:
+```json
+{
+  "aceleracao": 12,
+  "cilindros": 8,
+  "deslocamento": 307,
+  "cavalos": 130,
+  "milhasPorGalao": 18,
+  "nome": "chevrolet chevelle malibu",
+  "origem": "USA",
+  "pesoEmLibras": 3504,
+  "ano": "1970-01-01"
+}
+```
 
-### `yarn start`
+> O principal objetivo ter contato com a terminologia, os conceitos e a sintaxe básica dos modelos de treinamento com o TensorFlow.js.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Por se tratar de um processo de treinamento de um modelo para prever números contínuos, essa tarefa pode ser de cunho regressivo. Vamos treinar o modelo mostrando muitos exemplos de entradas junto com a saída correta. Isso é chamado de aprendizado supervisionado.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## O que foi criado neste projeto:
 
-### `yarn test`
+- Uma página da Web que usa o utilizando o `ReactJS`, implementando a biblioteca `TensorFlow.js` para treinar um modelo no navegador. O modelo aprenderá a prever "milhas por galão" (MPG) de acordo com a "potência".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Passos executados para o treinamento e inferência dos dados:
 
-### `yarn build`
+- Carregar e preparar os dados para o treinamento;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Etapa de definição da arquitetura do modelo;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Treinar o modelo e monitorar o desempenho durante o treinamento;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Fazer algumas previsões para avaliar o modelo treinado;
 
-### `yarn eject`
+## O que foi aprendido implentando este caso de uso:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Práticas recomendadas para a preparação de dados de machine learning, como embaralhamento e normalização;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A sintaxe do TensorFlow.js para a criação de modelos usando a API tf.layers;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- O monitoramento do treinamento no navegador com a biblioteca tfjs-vis
+  Pré-requisitos;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Conhecimento conceitual das redes neurais. [Introdução a Redes Neurais e Deep Learning](https://www.youtube.com/watch?v=Z2SGE3_2Grg)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div>
+<details>
+  <summary> <b> Mais detalhes sobre o painel da aplicação</b> <i>(Clique aqui para expandir)</i> </summary>
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![exemplo_previsao_completa](https://raw.githubusercontent.com/joaoffnascimento/tensorflow-reactjs-example/main/public/exemplo_previsao_completa.png?token=AE5MZLHQDOJUCUWX7XHFXY3BHAZ4C)
 
-### Code Splitting
+![dashboard_lateral_vazio](https://raw.githubusercontent.com/joaoffnascimento/tensorflow-reactjs-example/main/public/dashboard_lateral_vazio.png?token=AE5MZLBJBLVUMQQZXDIAUELBHAZSA)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![dashboard_lateral_carga](https://raw.githubusercontent.com/joaoffnascimento/tensorflow-reactjs-example/main/public/dashboard_lateral_carga.png?token=AE5MZLDVZL6C5DJS4M4XZLLBHAZYU)
 
-### Analyzing the Bundle Size
+![relatorio_desempenho_treinamento](https://raw.githubusercontent.com/joaoffnascimento/tensorflow-reactjs-example/main/public/relatorio_desempenho_treinamento.png?token=AE5MZLEISCZRQ4JY2RVFMNLBHAZ2K)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![representacao_predicaoXdados_originais](https://raw.githubusercontent.com/joaoffnascimento/tensorflow-reactjs-example/main/public/representacao_predicaoXdados_originais.png?token=AE5MZLHPGKC5DUZ6CPAU5WLBHAZ2S)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>
+</div>

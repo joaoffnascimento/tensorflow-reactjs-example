@@ -66,3 +66,23 @@ Exemplo de um dos carros do conjuto fornecido:
 
 </details>
 </div>
+
+---
+
+<div>
+<details>
+  <summary> <b> Explicando as funções utilizadas para execução do estudo de caso</b> <i>(Clique aqui para expandir)</i> </summary>
+<br/>
+<h3>As funções mencionadas abaixo se encontram no arquivo functions.js</h3>
+
+- GetDatasetFunction
+- GraphDataVisualisation
+- createModel
+- Model
+- convertToTensor
+- trainModel
+- Prediction
+- testModel
+
+</details>
+</div>

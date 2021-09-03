@@ -82,7 +82,7 @@ Exemplo de um dos carros do conjuto fornecido:
 - convertToTensor
 - trainModel
 - Prediction
-- testModel
+- testModel: `Nessa etapa nosso nosso modelo está "treinado", queremos fazer algumas previsões. Vamos avaliar o modelo vendo o que ele prevê. Lembrando que resultado final ira depender bastante de quanto seu modelo foi "treinado", então quanto mais treinar seu modelo melhor será resultado final;`
 
 </details>
 </div>

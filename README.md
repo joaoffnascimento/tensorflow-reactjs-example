@@ -77,17 +77,13 @@ Exemplo de um dos carros do conjuto fornecido:
 
 - GetDatasetFunction: ` Função responsável por realizar requisição ao storage do google, e obter o dataset necessário para execução do estudo de caso;`
 
-- GraphDataVisualisation: ` Função para remover quaisquer entradas sem definição de milhas por galão ou potência. Monta esses dados em um gráfico de dispersão para demonstrar o resultado;`
-
-- createModel: ` Função que **instancia o modelo** sequencia; porque as entradas fluem diretamente para baixo em direção à saída. Outros tipos de modelos podem ter ramificações ou várias entradas e saídas, mas, em muitos casos, os modelos serão sequenciais. E adiciona as camadas, essa ação adiciona uma camada de entrada à nossa rede, que é conectada automaticamente a uma camada dense com uma unidade oculta;`
-
-- Model: ` Isso criará uma instância do modelo e exibirá um resumo das camadas na página da Web;`
-
-- convertToTensor: ` Função responsável por preparar os dados para o treinamento -> Embaralhar os dados: Aqui, deixamos os exemplos que serão alimentados no algoritmo de treinamento em ordem aleatória. -> Converter em tensores: Depois, adotamos outra prática recomendada para o treinamento de machine learning. Normalizamos os dados. Faremos isso no intervalo numérico 0-1 usando escalonamento mínimo e máximo. E por ultimo retornar os dados e os limites de normalização;`
-
-- trainModel
-- Prediction
-- testModel: `Nessa etapa nosso nosso modelo está "treinado", queremos fazer algumas previsões. Vamos avaliar o modelo vendo o que ele prevê. Lembrando que resultado final ira depender bastante de quanto seu modelo foi "treinado", então quanto mais treinar seu modelo melhor será resultado final;`
+- GraphDataVisualisation
+- createModel
+- Model
+- convertToTensor
+- trainModel: `Essa é umas das principais funções. Com a instância de modelo criada e os dados representados como tensores, temos tudo pronto para iniciar o processo de treinamento. O valor informado no input "epochs" é consumido aqui, esse será nossa quantidade de treinamento;`
+- Prediction: `Essa funcção tem como objetivo gerar o input para digitarmos nossa pergunta, em nosso caso, quantidade de cavalos;`
+- testModel: `Nessa etapa nosso modelo está "treinado", queremos fazer algumas previsões. Vamos avaliar o modelo vendo o que ele prevê. Lembrando que resultado final ira depender bastante de quanto seu modelo foi "treinado", então quanto mais treinar seu modelo melhor será resultado final.`
 
 </details>
 </div>

@@ -75,7 +75,8 @@ Exemplo de um dos carros do conjuto fornecido:
 <br/>
 <h3>As funções mencionadas abaixo se encontram no arquivo functions.js</h3>
 
-- GetDatasetFunction
+- GetDatasetFunction: ` Função responsável por realizar requisição ao storage do google, e obter o dataset necessário para execução do estudo de caso;`
+
 - GraphDataVisualisation
 - createModel
 - Model
